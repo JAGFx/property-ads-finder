@@ -599,7 +599,7 @@ def kd_immobilier():
 
         annonce_to_add = Annonce()
         annonce_to_add.site = 'KdImmobilier'
-        annonce_to_add.lien = host + lien_element[0].attrs['href']
+        annonce_to_add.lien = host #+ lien_element[0].attrs['href']
         annonce_to_add.image = host + image_element[0].attrs['src']
         annonce_to_add.ref = ref_element[0].text.strip()
         annonce_to_add.prix = int(
@@ -805,19 +805,20 @@ def le_bon_coin():
 
     return annonces_a_enregistrer
 
-
+# FIXME: The following do not work
+# trenta_immo() + kd_immobilier() +
 def run_json():
-    annonces = century21() + cimm_immo() + safti() + bien_ici() + trenta_immo() + \
+    annonces = century21() + cimm_immo() + safti() + bien_ici() +  \
         square_habitat() + meilleurs_agents() + capi() + klein_immobilier() + \
-        aubreton() + bievre_immo() + iad_france() + imio() + kd_immobilier() + proximmo()
+        aubreton() + bievre_immo() + iad_france() + imio() + proximmo()
     for annonce in annonces:
         annonce.id = annonce.site + '_' + str(annonce.ref)
     print(json.dumps([ob.__dict__ for ob in annonces]))
 
 
 def test():
-    pprint([ob.__dict__ for ob in proximmo()])
+    pprint([ob.__dict__ for ob in kd_immobilier()])
 
 
-#test()
+# test()
 run_json()

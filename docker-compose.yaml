@@ -1,13 +1,14 @@
 version: '3.8'
 
 services:
-    real-estate-ads:
+    property-ads-finder:
+        container_name: property-ads-finder
         build:
             context: .
             dockerfile: docker/Dockerfile
-        image: real-estate-ads:latest
+        image: ghcr.io/jagfx/property-ads-finder:latest
         restart: always
         volumes:
-            -   ./src:/var/www/html
+            -   .:/srv
         ports:
             - "4096:80"

@@ -3,4 +3,4 @@ node_modules/
 *.cron
 rss.xml
 /src/data/*
-!src/data/villes.json
+!/src/data/.gitkeep
