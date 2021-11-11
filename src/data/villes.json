@@ -1,0 +1,82 @@
+{
+  "0": {
+    "code_postal": "38500",
+    "nom_commune": "St cassien",
+    "distance": "0.00018985627021715547"
+  },
+  "1": {
+    "code_postal": "38500",
+    "nom_commune": "La buisse",
+    "distance": "0.00018985627021715547"
+  },
+  "2": {
+    "code_postal": "38500",
+    "nom_commune": "Voiron",
+    "distance": "0.00018985627021715547"
+  },
+  "3": {
+    "code_postal": "38500",
+    "nom_commune": "Coublevie",
+    "distance": "0.00018985627021715547"
+  },
+  "4": {
+    "code_postal": "38500",
+    "nom_commune": "St nicolas de macherin",
+    "distance": "0.00018985627021715547"
+  },
+  "6": {
+    "code_postal": "38960",
+    "nom_commune": "St etienne de crossey",
+    "distance": "6.112119282898892"
+  },
+  "7": {
+    "code_postal": "38430",
+    "nom_commune": "St jean de moirans",
+    "distance": "6.1649670781280115"
+  },
+  "8": {
+    "code_postal": "38430",
+    "nom_commune": "Moirans",
+    "distance": "6.1649670781280115"
+  },
+  "15": {
+    "code_postal": "38340",
+    "nom_commune": "Voreppe",
+    "distance": "9.887751667889432"
+  },
+  "25": {
+    "code_postal": "38113",
+    "nom_commune": "Veurey voroize",
+    "distance": "11.083167451145243"
+  },
+  "26": {
+    "code_postal": "38140",
+    "nom_commune": "Rives",
+    "distance": "13.243546884385246"
+  },
+  "29": {
+    "code_postal": "38140",
+    "nom_commune": "Reaumont",
+    "distance": "13.243546884385246"
+  },
+  "31": {
+    "code_postal": "38140",
+    "nom_commune": "Charnecles",
+    "distance": "13.243546884385246"
+  },
+  "37": {
+    "code_postal": "38210",
+    "nom_commune": "Vourey",
+    "distance": "14.852619092719374"
+  },
+  "39": {
+    "code_postal": "38210",
+    "nom_commune": "Tullins",
+    "distance": "14.852619092719374"
+  },
+  "46": {
+    "code_postal": "38",
+    "nom_commune": "Isere",
+    "distance": "0"
+  }
+}

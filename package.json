@@ -1,0 +1,23 @@
+{
+  "name": "real-estate-ads-finder",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "feed": "^4.2.2",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JAGFx/real-estate-ads-finder.git"
+  },
+  "author": "Emmanuel SMITH <hey@emmanuel-smith.me>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JAGFx/real-estate-ads-finder.git/issues"
+  },
+  "homepage": "https://github.com/JAGFx/real-estate-ads-finder.git#readme"
+}

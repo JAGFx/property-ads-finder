@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+    real-estate-ads:
+        build:
+            context: .
+            dockerfile: docker/Dockerfile
+        image: real-estate-ads:latest
+        restart: always
+        volumes:
+            -   ./src:/var/www/html
+        ports:
+            - "4096:80"

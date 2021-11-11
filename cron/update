@@ -1,0 +1,1 @@
+ * * * * * cd /srv/docker && ./update-real-estate-ads.sh > /srv/cron/update-real-estate-ads.cron
