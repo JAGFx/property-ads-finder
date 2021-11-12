@@ -26,5 +26,5 @@ jobs:
     - name: Build and push docker image
       run: |
         docker build . --file docker/Dockerfile --tag ghcr.io/jagfx/property-ads-finder:latest
+        docker run ghcr.io/jagfx/property-ads-finder:latest
         docker push ghcr.io/jagfx/property-ads-finder:latest
-# docker run ghcr.io/jagfx/property-ads-finder:latest
