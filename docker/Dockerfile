@@ -25,5 +25,5 @@ RUN apt update -y \
     && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
     && crontab /srv/cron/update
 
-ENTRYPOINT  ["docker/entry.sh"]
+ENTRYPOINT  ["bash", "docker/entry.sh"]
 CMD ["docker-php-entrypoint", "apache2-foreground"]

@@ -1,1 +1,1 @@
- * * * * * /srv/docker/updater.sh > /srv/cron/updater.cron 2>$1 
+ * * * * * /srv/docker/updater.sh > /srv/cron/updater.cron
