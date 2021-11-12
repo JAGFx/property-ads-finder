@@ -1,17 +1,15 @@
 name: Docker Image CI
-
 on:
+#  create:
+#    tags:
+#      - v*
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-
 jobs:
-
-  build:
-
+  build-and-push:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -21,7 +19,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        password: ${{ secrets.PAT }}
 
     - name: Build and push docker image
       run: |
