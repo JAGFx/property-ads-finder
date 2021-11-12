@@ -12,18 +12,23 @@ RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 RUN apt update -y \
     && apt upgrade -y \
     && curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - \
-    && apt install nodejs -y \
-    && apt install python3 -y \
-    && apt install python3-pip -y \
-    && pip3 install --upgrade pip pyopenssl \
+    && apt install -y \
+    cron \
+    nodejs \
+    python3 \
+    python3-pip \
+    && pip3 install --no-cache-dir --upgrade pip pyopenssl \
     && pip3 install --no-cache-dir -r requirements.txt \
-    && apt install cron -y \
-    && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && apt purge --auto-remove \
+    && apt clean
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
     && echo $TZ > /etc/timezone \
     && npm i \
+    && crontab /srv/cron/update \
     && sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf \
-    && sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
-    && crontab /srv/cron/update
+	&& sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf \
+	&& chmod u+x -R docker
 
 ENTRYPOINT  ["bash", "docker/entry.sh"]
 CMD ["docker-php-entrypoint", "apache2-foreground"]

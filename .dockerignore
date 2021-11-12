@@ -1,0 +1,11 @@
+.git/
+.cache/
+.idea/
+*.md
+LICENSE
+src/data/*
+!src/data/.gitkeep
+*.cron
+rss.xml
+.github/
+node_modules/
